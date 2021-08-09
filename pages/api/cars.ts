@@ -4,7 +4,7 @@ import { MongoClient } from 'mongodb';
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   let client
   try {
-    client = await MongoClient.connect(`mongodb+srv://rubensmk:Z9EoszzKTS6Khi79@cluster0.njy0y.mongodb.net/cars?retryWrites=true&w=majority`)
+    client = await MongoClient.connect(`${process.env.MONGODB_CLIENT}`)
   } catch (error) {
     res.status(500).json({ message: 'Connecting to the database failed!' });
     return;

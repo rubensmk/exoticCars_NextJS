@@ -80,7 +80,7 @@ export default function Car({ selectedCar }: ISelectedCar) {
                                     Back to catalog
                                 </Link>
                             </div>
-                            <div>
+                            <div className={styles.fadeInImage}>
                                 <Image
                                     src={selectedCar.details[currentCar].main_image}
                                     alt={selectedCar.details[currentCar].color}

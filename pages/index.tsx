@@ -28,11 +28,12 @@ export default function Home({ allCars }: any) {
   return (
     <>
       <Header />
-      <main className={styles.container}>
+      <main className={`${styles.container} ${styles.fadeInImage}`}>
         {allCars.map((car: any) => (
           <Link href={`details/${car.id}`} key={car.id}>
             <CarCard
               data={car}
+
             />
           </Link>
 
