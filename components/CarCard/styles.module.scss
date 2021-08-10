@@ -10,6 +10,11 @@
       0% no-repeat padding-box;
     cursor: pointer;
   }
+
+  @media(max-width:425px){
+    width: 22rem;
+    height: 14rem;
+  }
 } 
   
 .title {

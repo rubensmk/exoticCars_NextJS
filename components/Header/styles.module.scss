@@ -8,6 +8,22 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 10px 30px #0000001a;
+
+  @media (max-width:600px){
+    height:7.2rem;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+  }
+
+  @media (max-width:425px){
+    height:8rem;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+  }
+
+  @media (max-width:375px){
+    padding: 1rem 2rem;
+  }
 }
  
 .logo{
@@ -25,6 +41,32 @@
     color: #313136;
     font-size: 1rem;
   }
+
+  @media(max-width:1064px){
+    strong {
+      color: #313136;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-right: 0.3rem;
+    }
+    p {
+      color: #313136;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width:375px){
+    strong {
+      color: #313136;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-right: 0.3rem;
+    }
+    p {
+      color: #313136;
+      font-size: 0.6rem;
+    }
+  }
 }
 
 .searchBar{
@@ -37,6 +79,13 @@
   border-radius: 1.2rem;
   background: #f3f1fc;
   padding-left: 1.7rem;
+
+  .filters div{
+    margin-right: 0.5rem;
+  }
+  div.filtersIcon{
+    display: none;
+  }
 
   div {
     display: flex;
@@ -51,8 +100,81 @@
   svg {
     color: #c4c4c4;
   }
+
+  @media(max-width:1064px){
+    width: 26rem;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+
+    p {
+      color: #656469;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-right: 0.2rem;
+    }
+  }
+
+  @media(max-width:916px){
+    width: 12rem;
+    height: 2.5rem;
+    justify-content: space-between;
+
+    .filters div{
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: row;
+    }
+
+    p {
+      display: none;
+      position:absolute;
+      top:10px;
+    }
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media(max-width:660px){
+    width: 6rem;
+    height: 2.5rem;
+    justify-content: space-between;
+
+    .filters div{
+      display:none;
+      margin-left:0.2rem;
+    }
+    div.filtersIcon{
+      display: block;
+      margin-left: 0.5rem;
+      svg{
+        color:#7B89F4;
+      }
+    }
+    div.filters{
+      display: none;
+    }
+  }
+  @media(max-width:375px){
+    width: 5rem;
+    height: 2.5rem;
+    justify-content: space-between;
+
+    div.filtersIcon{
+      display: block;
+      margin-left: 0.2rem;
+      svg{
+        color:#7B89F4;
+      }
+    }
+    div.filters{
+      display: none;
+    }
+  }
 }
-  
+
+
 .searchIcon{
   background: #ffff;
   width: 1.875rem;
@@ -67,6 +189,11 @@
     width: 1.2rem;
     height: 1.2rem;
   }
+
+  @media(max-width:916px){
+    width: 2.6rem;
+    height: 100%;
+  }
 }
 
 
@@ -80,6 +207,12 @@
   font-weight: bold;
   color: #7B89F4;
   border: 0;
+
+  @media(max-width:375px){
+    width: 4.2rem;
+    height: 2.2rem;
+    font-size: 0.9rem;
+  }
 }
   
 
@@ -93,5 +226,21 @@
   color: #7B89F4;
   border: 2px solid #7B89F4;
   margin-left: 1.75rem;
+
+  @media(max-width:375px){
+    width: 4.2rem;
+    height: 2.2rem;
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
 }
  
+.navBar{
+  display: flex;
+  flex-direction: row;
+
+  @media(max-width:375px){
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

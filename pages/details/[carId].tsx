@@ -65,7 +65,9 @@ export default function Car({ selectedCar }: ISelectedCar) {
                 {selectedCar.details && (
                     <>
                         <section className={styles.title}>
-                            <Image src={selectedCar.logo} alt={selectedCar.model} width={68} height={128} />
+                            <div className={styles.logo}>
+                                <Image src={selectedCar.logo} alt={selectedCar.model} width={68} height={128} />
+                            </div>
                             <div>
                                 <h1>
                                     {selectedCar.model.toUpperCase()} {selectedCar.maker.toUpperCase()}
@@ -102,25 +104,35 @@ export default function Car({ selectedCar }: ISelectedCar) {
                             <button type='button' onClick={handlePrevCar}>
                                 <FiArrowLeft />
                             </button >
-                            <Image
-                                src={selectedCar.details[currentCar == 0 ? 2 : currentCar - 1]?.icon_image}
-                                alt={selectedCar.model}
-                                height={180}
-                                width={300}
-                            />
-                            <Image
-                                src={selectedCar.details[currentCar].icon_image}
-                                alt={selectedCar.model}
-                                height={240}
-                                width={360}
-                                className={styles.carouselImg}
-                            />
-                            <Image
-                                src={selectedCar.details[currentCar == 2 ? 0 : currentCar + 1]?.icon_image}
-                                alt={selectedCar.model}
-                                height={180}
-                                width={300}
-                            />
+                            <div className={styles.prevColor}>
+                                <Image
+                                    src={selectedCar.details[currentCar == 0 ? 2 : currentCar - 1]?.icon_image}
+                                    alt={selectedCar.model}
+                                    height={180}
+                                    width={300}
+                                />
+                            </div>
+
+                            <div className={styles.carouselImg}>
+                                <Image
+                                    src={selectedCar.details[currentCar].icon_image}
+                                    alt={selectedCar.model}
+                                    height={240}
+                                    width={360}
+
+                                />
+                            </div>
+
+                            <div className={styles.nextColor}>
+                                <Image
+                                    src={selectedCar.details[currentCar == 2 ? 0 : currentCar + 1]?.icon_image}
+                                    alt={selectedCar.model}
+                                    height={180}
+                                    width={300}
+
+                                />
+                            </div>
+
                             <button type='button' onClick={handleNextCar}>
                                 <FiArrowRight />
                             </button>
